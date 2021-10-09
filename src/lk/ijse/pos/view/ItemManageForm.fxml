@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="551.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.ItemManageFormController">
+   <children>
+      <Text layoutX="22.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Manage">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtID" labelFloat="true" layoutX="22.0" layoutY="84.0" prefHeight="26.0" prefWidth="170.0" promptText="Item ID" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="207.0" layoutY="84.0" prefHeight="26.0" prefWidth="170.0" promptText="Item Name" />
+      <JFXTextField fx:id="txtDesc" labelFloat="true" layoutX="397.0" layoutY="84.0" prefHeight="26.0" prefWidth="170.0" promptText="Description" />
+      <JFXTextField fx:id="txtSpec" labelFloat="true" layoutX="580.0" layoutY="84.0" prefHeight="26.0" prefWidth="170.0" promptText="Specification" />
+      <JFXTextField fx:id="txtDisplayName" labelFloat="true" layoutX="22.0" layoutY="137.0" prefHeight="26.0" prefWidth="170.0" promptText="Display Name" />
+      <JFXTextField fx:id="txtBrand" labelFloat="true" layoutX="580.0" layoutY="137.0" prefHeight="26.0" prefWidth="170.0" promptText="Available Brand" />
+      <JFXButton fx:id="btnDelete" layoutX="397.0" layoutY="194.0" onAction="#deleteOnAction" prefHeight="33.0" prefWidth="170.0" style="-fx-background-color: blue;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnAdd" layoutX="22.0" layoutY="194.0" onAction="#addOnAction" prefHeight="33.0" prefWidth="170.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="208.0" layoutY="194.0" onAction="#updateOnAction" prefHeight="33.0" prefWidth="170.0" style="-fx-background-color: blue;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblItem" layoutX="22.0" layoutY="242.0" prefHeight="299.0" prefWidth="760.0">
+        <columns>
+          <TableColumn fx:id="tblId" prefWidth="62.0" text="ID" />
+          <TableColumn fx:id="tblName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="tblDesc" prefWidth="93.0" text="Description" />
+            <TableColumn fx:id="tblSpec" prefWidth="127.0" text="Specification" />
+            <TableColumn fx:id="tblDisplayName" prefWidth="112.0" text="Display Name" />
+            <TableColumn fx:id="tblAvailability" prefWidth="99.0" text="Availability" />
+            <TableColumn fx:id="tblState" prefWidth="83.0" text="State" />
+            <TableColumn fx:id="tblBrand" prefWidth="106.0" text="Brand" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="txtAvailability" labelFloat="true" layoutX="205.0" layoutY="137.0" prefHeight="26.0" prefWidth="177.0" promptText="Availability" />
+      <JFXComboBox fx:id="txtState" labelFloat="true" layoutX="394.0" layoutY="137.0" prefHeight="26.0" prefWidth="177.0" promptText="Active State" />
+   </children>
+</AnchorPane>

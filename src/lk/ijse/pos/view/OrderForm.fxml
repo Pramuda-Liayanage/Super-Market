@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="551.0" prefWidth="794.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.OrderFormController">
+   <children>
+      <Text layoutX="22.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Form">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtOrderID" layoutX="27.0" layoutY="88.0" prefHeight="35.0" prefWidth="235.0" promptText="Order Id" />
+      <JFXTextField fx:id="txtCost" layoutX="533.0" layoutY="88.0" prefHeight="35.0" prefWidth="235.0" promptText="Total Cost" />
+      <JFXComboBox fx:id="txtCustomerID" layoutX="27.0" layoutY="150.0" prefHeight="35.0" prefWidth="235.0" promptText="Customer ID" />
+      <JFXComboBox fx:id="txtUserID" layoutX="285.0" layoutY="150.0" prefHeight="35.0" prefWidth="235.0" promptText="User ID" />
+      <JFXDatePicker fx:id="txtDate" layoutX="285.0" layoutY="93.0" prefHeight="26.0" prefWidth="235.0" promptText="Date" />
+      <JFXButton fx:id="btnPlaceOrder" layoutX="555.0" layoutY="150.0" onAction="#placeOrderOnAction" prefHeight="35.0" prefWidth="204.0" style="-fx-background-color: blue;" text="Place Order" textFill="WHITE" />
+      <TableView fx:id="btlOrder" layoutX="14.0" layoutY="202.0" prefHeight="342.0" prefWidth="767.0">
+        <columns>
+          <TableColumn fx:id="tblOrderID" prefWidth="101.0" text="Order Id" />
+          <TableColumn fx:id="tblDate" prefWidth="174.0" text="date" />
+            <TableColumn fx:id="tblCost" prefWidth="196.0" text="cost" />
+            <TableColumn fx:id="tblCustomerID" prefWidth="153.0" text="Customer ID" />
+            <TableColumn fx:id="tblUserID" prefWidth="142.0" text="User ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="563.0" prefWidth="1021.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.LoginFormController">
+   <children>
+      <Text layoutX="368.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SuperMarket" wrappingWidth="334.11328125">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserName" focusColor="BLACK" labelFloat="true" layoutX="344.0" layoutY="305.0" prefHeight="26.0" prefWidth="359.0" promptText="User Name" unFocusColor="BLACK" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="344.0" layoutY="372.0" prefHeight="26.0" prefWidth="359.0" promptText="Password" unFocusColor="BLACK" />
+      <JFXButton fx:id="btnLogin" layoutX="344.0" layoutY="440.0" onAction="#loginOnAction" prefHeight="26.0" prefWidth="359.0" style="-fx-background-color: blue;" text="SignIn" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="163.0" fitWidth="227.0" layoutX="419.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/image.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="btnLink" layoutX="450.0" layoutY="490.0" onAction="#newUserOnAction" text="Create New User" textFill="#0a5eee">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>
