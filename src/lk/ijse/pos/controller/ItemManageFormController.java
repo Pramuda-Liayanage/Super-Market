@@ -69,7 +69,7 @@ public class ItemManageFormController implements Initializable {
         ObservableList<String> availability = FXCollections.observableArrayList("10", "20","30","40");
         txtAvailability.setItems(availability);
 
-        ObservableList<String> state = FXCollections.observableArrayList("10", "20","30","40");
+        ObservableList<String> state = FXCollections.observableArrayList("10","40");
         txtState.setItems(state);
     }
 
