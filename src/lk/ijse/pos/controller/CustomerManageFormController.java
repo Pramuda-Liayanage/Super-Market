@@ -48,7 +48,7 @@ public class CustomerManageFormController implements Initializable {
             bo.saveCustomer(new CustomerDTO(txtID.getText(), txtType.getValue().toString(), txtName.getText(), txtAddress.getText(), txtCity.getText(), txtProvince.getText(), txtContact.getText()));
 
         } catch (Exception e) {
-            e.getMessage();
+            e.getCause();
         }
     }
 
